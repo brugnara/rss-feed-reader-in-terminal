@@ -1,0 +1,13 @@
+##########################################
+RSS Feed reader by Daniele Brugnara - 2021
+
+RSS info
+Title: {{.Title}}
+Descr: {{.Descr}}
+Home page: {{.Link}}
+
+RSS items
+{{range $i, $item := .Items}}
+News #{{incr $i 1}}
+{{template "item" $item}}
+{{end}}
